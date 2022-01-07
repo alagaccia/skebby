@@ -1,0 +1,24 @@
+{
+    "name": "alagaccia/skebby",
+    "description": "Skebby API",
+    "type": "library",
+    "license": "NLPL",
+    "version": "1.12",
+    "authors": [
+        {
+            "name": "Andrea Lagaccia",
+            "email": "a.lagaccia@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "alagaccia\\skebby\\": "src"
+        }
+    },
+    "require": {
+		"php": ">=7.0"
+	},
+	"require-dev": {
+        "ext-curl": "*"
+    }
+}
