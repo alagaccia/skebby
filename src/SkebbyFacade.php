@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Facade;
  * This facade provides static access to the Skebby SMS service.
  * 
  * @method static array login() Authenticate with the Skebby API
- * @method static array|null send(string $phone, string $message, string|null $messageType = null) Send an SMS message
+ * @method static array|null send(string $phone, string $message, string|null $messageType = null, string|null $campaignName = null) Send an SMS message
  * @method static array|null getInfo() Get account information and SMS credits status
  * @method static int getRemaining(string|null $messageType = null) Get remaining SMS credits for a message type
  * @method static array getAllRemainingCredits() Get remaining credits for all message types

@@ -110,6 +110,12 @@ use Skebby;
 // Send with specific message type
 $result = Skebby::send('1234567890', 'Hello!', Skebby::MESSAGE_CLASSIC_PLUS);
 
+// Send with campaign name for tracking
+$result = Skebby::send('1234567890', 'Hello!', null, 'Summer Campaign 2024');
+
+// Send with both message type and campaign name
+$result = Skebby::send('1234567890', 'Hello!', Skebby::MESSAGE_CLASSIC_PLUS, 'Summer Campaign 2024');
+
 // Available message types:
 // Skebby::MESSAGE_CLASSIC_PLUS  ('GP') - Classic Plus
 // Skebby::MESSAGE_CLASSIC       ('TI') - Classic (default)
@@ -164,7 +170,7 @@ return [
 
 ### Skebby Class Methods
 
-- `send(string $phone, string $message, ?string $messageType = null): ?array`
+- `send(string $phone, string $message, ?string $messageType = null, ?string $campaignName = null): ?array`
 - `getInfo(): ?array` - Get account information
 - `getRemaining(?string $messageType = null): int` - Get remaining credits
 - `getAllRemainingCredits(): array` - Get all remaining credits

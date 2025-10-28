@@ -145,10 +145,11 @@ class Skebby
      * @param string $phone The recipient phone number (international format recommended)
      * @param string $message The SMS message content (max 160 chars for standard SMS)
      * @param string|null $messageType Optional message type override
+     * @param string|null $campaignName Optional campaign name for tracking purposes
      * @return array|null The API response data or null on failure
      * @throws SkebbyException If input parameters are invalid or API request fails
      */
-    public function send(string $phone, string $message, ?string $messageType = null): ?array
+    public function send(string $phone, string $message, ?string $messageType = null, ?string $campaignName = null): ?array
     {
         // Validate input parameters
         if (empty($phone)) {
@@ -180,6 +181,11 @@ class Skebby
                 'recipient' => [$phone],
                 'sender' => $this->alias,
             ];
+
+            // Add campaign name if provided
+            if (!empty($campaignName)) {
+                $body['campaign_name'] = $campaignName;
+            }
 
             $response = Http::timeout(30)->withHeaders([
                 'Content-Type' => 'application/json',
