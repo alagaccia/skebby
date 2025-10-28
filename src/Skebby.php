@@ -1,10 +1,10 @@
 <?php
 
-namespace alagaccia\skebby;
+namespace AndreaLagaccia\Skebby;
 
 use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Client\Response;
-use alagaccia\skebby\Exceptions\SkebbyException;
+use AndreaLagaccia\Skebby\Exceptions\SkebbyException;
 
 /**
  * Skebby SMS API Client

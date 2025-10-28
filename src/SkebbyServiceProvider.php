@@ -1,6 +1,6 @@
 <?php
 
-namespace alagaccia\skebby;
+namespace AndreaLagaccia\Skebby;
 
 use Illuminate\Support\ServiceProvider;
 

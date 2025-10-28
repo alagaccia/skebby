@@ -56,7 +56,7 @@ $remaining = Skebby::getRemaining();
 ### Using Dependency Injection
 
 ```php
-use alagaccia\skebby\Skebby;
+use AndreaLagaccia\Skebby\Skebby;
 
 class SmsController extends Controller
 {

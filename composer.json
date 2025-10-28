@@ -11,7 +11,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "alagaccia\\skebby\\": "src"
+            "AndreaLagaccia\\Skebby\\": "src"
         }
     },
     "require": {
@@ -22,10 +22,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "alagaccia\\skebby\\SkebbyServiceProvider"
+                "AndreaLagaccia\\Skebby\\SkebbyServiceProvider"
             ],
             "aliases": {
-                "Skebby": "alagaccia\\skebby\\SkebbyFacade"
+                "Skebby": "AndreaLagaccia\\Skebby\\SkebbyFacade"
             }
         }
     },

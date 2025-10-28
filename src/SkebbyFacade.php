@@ -1,6 +1,6 @@
 <?php
 
-namespace alagaccia\skebby;
+namespace AndreaLagaccia\Skebby;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static array getAllRemainingCredits() Get remaining credits for all message types
  * @method static void clearAuthCache() Clear the authentication cache
  * 
- * @see \alagaccia\skebby\Skebby
+ * @see \AndreaLagaccia\Skebby\Skebby
  */
 class SkebbyFacade extends Facade
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace alagaccia\skebby\Exceptions;
+namespace AndreaLagaccia\Skebby\Exceptions;
 
 use Exception;
 
