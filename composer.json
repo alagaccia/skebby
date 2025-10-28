@@ -16,9 +16,31 @@
         }
     },
     "require": {
-		"php": ">=7.0"
-	},
-	"require-dev": {
-        "ext-curl": "*"
+        "php": ">=7.0",
+        "illuminate/support": "^8.0|^9.0|^10.0|^11.0",
+        "illuminate/http": "^8.0|^9.0|^10.0|^11.0"
+    },
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "alagaccia\\skebby\\SkebbyServiceProvider"
+            ],
+            "aliases": {
+                "Skebby": "alagaccia\\skebby\\SkebbyFacade"
+            }
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@php -r \"echo '\\n\\033[32mSkebby SMS Package installed successfully!\\033[0m\\n';\"",
+            "@php -r \"echo '\\033[33mTo publish the configuration file, run:\\033[0m\\n';\"",
+            "@php -r \"echo '\\033[36mphp artisan vendor:publish --tag=skebby-config\\033[0m\\n\\n';\""
+        ],
+        "post-update-cmd": [
+            "@php -r \"echo '\\n\\033[32mSkebby SMS Package updated successfully!\\033[0m\\n';\"",
+            "@php -r \"echo '\\033[33mTo publish the configuration file, run:\\033[0m\\n';\"",
+            "@php -r \"echo '\\033[36mphp artisan vendor:publish --tag=skebby-config\\033[0m\\n\\n';\""
+        ]
     }
 }
