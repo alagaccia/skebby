@@ -149,7 +149,7 @@ class Skebby
      * @return array|null The API response data or null on failure
      * @throws SkebbyException If input parameters are invalid or API request fails
      */
-    public function send(string $phone, string $message, ?string $messageType = null, ?string $campaignName = null): ?array
+    public function send(string $phone, string $message, ?string $messageType = null, ?string $campaignName = null): array|object|null
     {
         // Validate input parameters
         if (empty($phone)) {
